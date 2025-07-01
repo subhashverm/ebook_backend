@@ -54,11 +54,7 @@ Create .env file:
 
 ini
 Copy
-Edit
-EMAIL_USER=yourgmail@gmail.com
-EMAIL_PASS=yourpassword
-RAZORPAY_KEY=your_key
-RAZORPAY_SECRET=your_secret
+Edit 
 Start server:
 
 nginx
