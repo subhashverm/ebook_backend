@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const sendMail = require("../utils/sendMail");
 
-router.post("/send-email", async (req, res) => {
+router.post("/api/send-email", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
