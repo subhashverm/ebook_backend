@@ -7,8 +7,16 @@ const path = require("path");
 dotenv.config();
 const app = express();
 app.use(express.json());
+// ✅ Add CORS here
+const allowedOrigins = ["https://theenhancedguide.rf.gd"];
 app.use(cors({
-  origin: "https://theenhancedguide.rf.gd" // ✅ yahan tumhara actual frontend domain likho
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
 }));
 
 // Static frontend serving
