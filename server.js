@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "https://theenhancedguide.rf.gd/" // ✅ yahan tumhara actual frontend domain likho
+  origin: "https://theenhancedguide.rf.gd" // ✅ yahan tumhara actual frontend domain likho
 }));
 
 // Static frontend serving
@@ -38,7 +38,7 @@ app.post("/create-order", async (req, res) => {
 
 // Email route
 const emailRoute = require("./routes/email");
-app.use("/", emailRoute);
+app.use("/api", emailRoute);
 
 // Start server
 const PORT = process.env.PORT || 5000;
