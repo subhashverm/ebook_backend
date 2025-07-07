@@ -31,7 +31,7 @@ app.post("/create-order", async (req, res) => {
     });
 
     const options = {
-      amount: 199 * 100, // ₹199 in paise
+      amount: 249 * 100, // ₹249 in paise
       currency: "INR",
       receipt: "receipt_order_" + Date.now(),
     };
